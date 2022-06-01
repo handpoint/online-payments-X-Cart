@@ -1,0 +1,63 @@
+{##
+ # PaymentNetwork Hosted configuration page
+ #}
+
+<style>
+  #settings_prefix {
+    width: 175px;
+  }
+</style>
+
+<table cellspacing="1" cellpadding="5" class="settings-table">
+  <tr>
+    <td class="setting-name">
+      <label for="setting_merchantID">{{t('Merchant ID')}}</label>
+    </td>
+    <td>
+      <input type="text" id="settings_merchantID" name="settings[merchantID]" value="{{ this.paymentMethod.getSetting('merchantID') }}" class="validate[required,maxSize[6]]" />
+    </td>
+  </tr>
+  <tr>
+    <td class="setting-name">
+      <label for="settings_signatureKey">{{t('Signature Key')}}</label>
+    </td>
+    <td>
+      <input type="text" id="settings_signatureKey" name="settings[signatureKey]" value="{{ this.paymentMethod.getSetting('signatureKey') }}" class="validate[required]" />
+    </td>
+  </tr>
+  <tr>
+    <td class="setting-name">
+      <label for="setings_customForm">{{t('Custom Form')}}</label>
+    </td>
+    <td>
+      <input type="text" id="settings_customForm" name="settings[customForm]" value="{{ this.paymentMethod.getSetting('customForm') }}" />
+    </td>
+  </tr>
+  <tr>
+    <td class="setting-name">
+      <label for="settings_formResponsive">{{t('Responsive Form')}}</label>
+    </td>
+    <td>
+      <select id="settings_formResponsive" name="settings[formResponsive]">
+        <option value="Y" {% if this.isSelected(this.paymentMethod.getSetting('formResponsive'), 'Y') %} selected="selected" {% endif %}>{{ t('Yes')}}</option>
+        <option value="N" {% if this.isSelected(this.paymentMethod.getSetting('formResponsive'), 'N') %} selected="selected" {% endif %}>{{ t('No')}}</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td class="setting-name">
+      <label for="settings_currencyCode">{{t('Currency Code')}}</label>
+    </td>
+    <td>
+      <input type="text" id="settings_currencyCode" name="settings[currencyCode]" value="{{ this.paymentMethod.getSetting('currencyCode')}}" />
+    </td>
+  </tr>
+  <tr>
+    <td class="setting-name">
+      <label for="settings_countryCode">{{t('Country Code')}}</label>
+    </td>
+    <td>
+      <input type="text" id="settings_countryCode" name="settings[countryCode]" value="{{ this.paymentMethod.getSetting('countryCode')}}" />
+    </td>
+  </tr>
+</table>

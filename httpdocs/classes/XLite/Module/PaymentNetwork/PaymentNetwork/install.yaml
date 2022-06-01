@@ -1,0 +1,20 @@
+XLite\Model\Payment\Method:
+  - service_name: PaymentNetwork
+    class: Module\PaymentNetwork\PaymentNetwork\Model\Payment\Processor\PaymentNetwork
+    type: C
+    translations:
+      - code: en
+        name: PaymentNetwork
+    settings:
+      - name: merchantID
+        value: 100001
+      - name: signatureKey
+        value: Circle4Take40Idea
+      - name: customForm
+        value: https://gateway.example.com/hosted/
+      - name: formResponsive
+        value: No
+      - name: currencyCode
+        value: 826
+      - name: countryCode
+        value: 826
