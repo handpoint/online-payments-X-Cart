@@ -27,7 +27,7 @@ To rebrand this module, complete the following steps:
 
 1.In file `httpdocs/classes/XLite/Module/PaymentNetwork/Model/Payment/Processor/PaymentNetwork.php` change the following:
 	- Line 4: `* Copyright (c) 2016-present PaymentNetwork. All rights reserved.` change the copyright to your brand name
-	- Line 17: `const GATEWAYURL = "https://gateway.example.com/hosted/";` change the URL to that which we supply
+	- Line 17: `const GATEWAYURL = "https://commerce-api.handpoint.com/hosted/";` change the URL to that which we supply
 
 2. In file `httpdocs/classes/XLite/Module/PaymentNetwork/PaymentNetwork/Main.php` change the following:
 	- Line 23: ` * @author    PaymentNetwork Ltd <support@example.com>` change to your brand and support email
@@ -40,7 +40,7 @@ To rebrand this module, complete the following steps:
 	
 3. In file `httpdocs/classes/XLite/Module/PaymentNetwork/PaymentNetwork/install.yaml` change the following:
 	- Line 7: `        name: PaymentNetwork` change PaymentNetwork to your brand name
-	- Line 14: `        value: https://gateway.example.com/hosted/` change the URL to that which we supply
+	- Line 14: `        value: https://commerce-api.handpoint.com/hosted/` change the URL to that which we supply
 
 4. Finally replace the files:
 	- `httpdocs/classes/XLite/Module/PaymentNetwork/PaymentNetwork/icon.png` and

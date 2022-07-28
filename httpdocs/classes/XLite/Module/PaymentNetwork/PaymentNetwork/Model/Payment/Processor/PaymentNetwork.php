@@ -14,7 +14,7 @@ namespace XLite\Module\PaymentNetwork\PaymentNetwork\Model\Payment\Processor;
  */
 class PaymentNetwork extends \XLite\Model\Payment\Base\WebBased {
 
-  const GATEWAYURL = "https://gateway.example.com/hosted/";
+  const GATEWAYURL = "https://commerce-api.handpoint.com/hosted/";
 
   /**
    * Get operation types
